@@ -1,0 +1,29 @@
+Licencia del Proyecto H2Origin
+Diseñado por: Pablo Cabrera
+
+Este proyecto es hardware de código abierto y software libre. Para cumplir con las directrices de la OSHWA (Open Source Hardware Association), 
+los diferentes componentes de este proyecto se distribuyen bajo las siguientes licencias libres:
+
+1. Código Fuente / Firmware (Software)
+Todo el código fuente contenido en este repositorio (.ino, .txt u otros formatos de firmware) está protegido bajo la Licencia MIT.
+
+Copyright (c) 2026 Pablo Cabrera
+
+Por la presente se concede permiso, sin cargo, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados 
+(el "Software"), para utilizar el Software sin restricción, incluyendo sin limitación los derechos de usar, copiar, modificar, fusionar, publicar, 
+distribuir, sublicenciar y/o vender copias del Software, sujeto a la siguiente condición:
+
+El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
+
+2. Archivos de Diseño Electrónico (Hardware)
+Todos los esquemáticos, diagramas de pines, diseños de PCB, archivos de proyectos nativos y archivos de fabricación Gerber se distribuyen bajo la licencia 
+CERN Open Hardware Licence Version 2 - Weakly Reciprocal (CERN-OHL-W-2.0).
+
+Cualquiera puede fabricar, modificar y comercializar este diseño de hardware, siempre y cuando mantenga los créditos del autor original y 
+libere las modificaciones bajo esta misma licencia.
+
+3. Documentación y Gráficos
+Toda la documentación escrita (incluyendo el archivo README.md), diagramas de flujo, imágenes e interfaces gráficas se distribuyen bajo la licencia 
+Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0).
