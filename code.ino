@@ -12,12 +12,14 @@
 #include "Adafruit_MQTT_Client.h"
 
 // --- CONFIGURACIÓN WI-FI ---
-#define WLAN_SSID       
-#define WLAN_PASS       
+#define WLAN_SSID  "Credenciales"     
+#define WLAN_PASS  ""     
 
 // --- CREDENCIALES ADAFRUIT IO ---
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883
+#define AIO_USERNAME    ""
+#define AIO_KEY         ""
 
 #define NEOPIXEL_PIN    27  
 #define NUM_PIXELS       1  
