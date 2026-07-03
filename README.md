@@ -33,7 +33,7 @@ El siguiente cuadro detalla la interconexión física definitiva entre los perif
 
 ## 📡 2. Protocolos de Comunicación Implementados
 
-El sistema optimiza el ancho de banda y la respuesta síncrona del procesador dividiendo las tareas en 4 topologías de comunicación en paralelo:
+El sistema utilizaa el ancho de banda y la respuesta síncrona del procesador dividiendo las tareas en 4 topologías de comunicación en paralelo:
 
 1. **SPI (Serial Peripheral Interface):** Utilizado exclusivamente por la **Pantalla GC9A01A**. Opera en modo maestro-esclavo a alta velocidad para asegurar un refresco de pantalla fluido de 60 FPS en la interfaz circular sin retrasar las tareas de fondo.
 2. **I2C (Inter-Integrated Circuit):** Empleado por el módulo ambiental **BME680**. Requiere solo dos hilos (`SDA` y `SCL`) compartidos, permitiendo direccionamiento por hardware en el bus (Dirección por defecto: `0x76`).
@@ -99,6 +99,18 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 * `OneWire` y `DallasTemperature`
 * `Adafruit_BME680` y `Adafruit_Sensor`
 * `Adafruit_MQTT` y `Adafruit_MQTT_Client`
+
+## 5. Diseño de la PCB
+<img width="385" height="581" alt="image" src="https://github.com/user-attachments/assets/5789b969-257a-4d6f-8530-94177b0bef66" />
+<img width="253" height="427" alt="image" src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" />
+
+**Módulos utilizados**
+**TDS (Solidos disueltos en el agua)**
+<img width="360" height="271" alt="image" src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" />
+
+
+**pH (Acidez agua)**
+<img width="510" height="382" alt="image" src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" />
 
 
 **Diseñado por: Pablo Cabrera**
