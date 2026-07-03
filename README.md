@@ -105,11 +105,16 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 <img width="253" height="427" alt="image" src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" />
 
 **Módulos utilizados**
+
 **TDS (Solidos disueltos en el agua)**
+
+
 <img width="360" height="271" alt="image" src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" />
 
 
 **pH (Acidez agua)**
+
+
 <img width="510" height="382" alt="image" src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" />
 
 
