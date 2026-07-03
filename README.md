@@ -118,4 +118,3 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 <img width="510" height="382" alt="image" src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" />
 
 
-**Diseñado por: Pablo Cabrera**
