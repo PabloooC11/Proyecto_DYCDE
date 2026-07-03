@@ -1,10 +1,10 @@
 # H2Origin - Sistema de Monitoreo Hidrológico y Atmosférico
 
-H2Origin es un sistema embebido avanzado de monitoreo basado en el microcontrolador **ESP32**. El dispositivo recopila variables críticas tanto de entornos líquidos (pH, sólidos disueltos, temperatura) como de la atmósfera (temperatura, humedad, presión, altitud y gases/pureza del aire), procesando los datos en tiempo real, mostrándolos en una interfaz gráfica circular y transmitiéndolos a la nube mediante IoT.
+H2Origin es un sistema embebido y con módulos de monitoreo basado en el microcontrolador **ESP32**. El dispositivo recopila variables críticas tanto de entornos líquidos (pH, sólidos disueltos, temperatura) como de la atmósfera (temperatura, humedad, presión, altitud y gases/pureza del aire), procesando los datos en tiempo real, mostrándolos en una interfaz gráfica circular y transmitiéndolos a la nube mediante IoT.
 
 ---
 
-## 📌 1. Mapeo de Pines (Pinout General)
+## 📌 1. Pinout General
 
 El siguiente cuadro detalla la interconexión física definitiva entre los periféricos y la placa ESP32 de acuerdo con la arquitectura del firmware:
 
