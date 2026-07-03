@@ -1,5 +1,4 @@
 # H2Origin - Sistema de Monitoreo Hidrológico y Atmosférico
-**Diseñado por: Pablo Cabrera**
 
 H2Origin es un sistema embebido avanzado de monitoreo basado en el microcontrolador **ESP32**. El dispositivo recopila variables críticas tanto de entornos líquidos (pH, sólidos disueltos, temperatura) como de la atmósfera (temperatura, humedad, presión, altitud y gases/pureza del aire), procesando los datos en tiempo real, mostrándolos en una interfaz gráfica circular y transmitiéndolos a la nube mediante IoT.
 
@@ -100,3 +99,6 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 * `OneWire` y `DallasTemperature`
 * `Adafruit_BME680` y `Adafruit_Sensor`
 * `Adafruit_MQTT` y `Adafruit_MQTT_Client`
+
+
+**Diseñado por: Pablo Cabrera**
