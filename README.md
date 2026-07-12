@@ -102,11 +102,11 @@ El siguiente cuadro detalla la interconexión física definitiva entre los perif
 ---
 
 ## 🧪 5. Cómo usar
-**Clona el repositorio.**
-**Carga el firmware en tu ESP32, cambiando las credenciales de la conexión en Wifi y Adafruit.**
-**Conecta los sensores, pantalla y módulos según el diagrama de pines.**
-**Configura tu broker MQTT y WiFi.**
-**Visualiza todo desde tu teléfono o una interfaz desde io.Adafruit.**
+**Clona el repositorio.
+**Carga el firmware en tu ESP32, cambiando las credenciales de la conexión en Wifi y Adafruit.
+**Conecta los sensores, pantalla y módulos según el diagrama de pines.
+**Configura tu broker MQTT y WiFi.
+**Visualiza todo desde tu teléfono o una interfaz desde io.Adafruit.
 
 
 ## 6. Diseño de la PCB.
