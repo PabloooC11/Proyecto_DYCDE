@@ -4,45 +4,7 @@ H2Origin es un sistema embebido y con módulos de monitoreo basado en el microco
 
 ---
 
-## 📌 1. Pinout General
-
-El siguiente cuadro detalla la interconexión física definitiva entre los periféricos y la placa ESP32 de acuerdo con la arquitectura del firmware:
-
-| Componente / Módulo | Pin del Componente | Pin ESP32 | Tipo de Señal / Rol Electrónico |
-| :--- | :--- | :--- | :--- |
-| **Pantalla GC9A01A** | CS (Chip Select) | **GPIO 5** | Salida Digital (Control SPI) |
-| | DC (Data/Command) | **GPIO 2** | Salida Digital (Control SPI) |
-| | RST (Reset) | **GPIO 15** | Salida Digital (Control SPI) |
-| | CLK / SCLK | **GPIO 18** | Reloj SPI Nativo |
-| | DIN / MOSI | **GPIO 23** | Transmisión de Datos SPI Nativa |
-| **Sensor de pH (PH-4502C)** | Po (Señal Analógica) | **GPIO 34** | Entrada Analógica (ADC1_CH6) |
-| **Sensor TDS (Agua)** | T (Señal Analógica) | **GPIO 35** | Entrada Analógica (ADC1_CH7) |
-| | VCC (Alimentación) | **GPIO 25** | Salida Digital (Control de Transistor) |
-| **Sensor MQ-2 (Aire)** | AO (Señal Analógica) | **GPIO 32** | Entrada Analógica (ADC1_CH4) |
-| **Termopar (DS18B20)** | DQ (Datos) | **GPIO 4** | Bus Digital Bidireccional (1-Wire) |
-| **Sensor BME680** | SDA | **GPIO 21** | Línea de Datos I2C Nativa |
-| | SCL | **GPIO 22** | Línea de Reloj I2C Nativa |
-| **NeoPixel RGB** | DI (Data In) | **GPIO 27** | Bus Digital / Control de Tira (Bit-banging) |
-| **Buzzer Activo** | VCC / Positivo | **GPIO 13** | Salida Digital (Alarma Sonora Fija) |
-| **LED Alerta General** | Ánodo (+) | **GPIO 12** | Salida Digital / PWM |
-| **LED Clima** | Ánodo (+) | **GPIO 14** | Salida Digital / PWM (Atenuación Estética) |
-| **LED Aire** | Ánodo (+) | **GPIO 26** | Salida Digital / PWM (Atenuación Estética) |
-| **LED pH** | Ánodo (+) | **GPIO 33** | Salida Digital / PWM (Atenuación Estética) |
-
----
-
-## 📡 2. Protocolos de Comunicación Implementados
-
-El sistema utilizaa el ancho de banda y la respuesta síncrona del procesador dividiendo las tareas en 4 topologías de comunicación en paralelo:
-
-1. **SPI (Serial Peripheral Interface):** Utilizado exclusivamente por la **Pantalla GC9A01A**. Opera en modo maestro-esclavo a alta velocidad para asegurar un refresco de pantalla fluido de 60 FPS en la interfaz circular sin retrasar las tareas de fondo.
-2. **I2C (Inter-Integrated Circuit):** Empleado por el módulo ambiental **BME680**. Requiere solo dos hilos (`SDA` y `SCL`) compartidos, permitiendo direccionamiento por hardware en el bus (Dirección por defecto: `0x76`).
-3. **1-Wire (Bus un solo hilo):** Implementado por el termopar **DS18B20**. Protocolo propietario de Dallas Semiconductor que realiza transmisiones de datos y sincronía de reloj sobre una única línea compartida (`GPIO 4`), requiriendo una resistencia externa de Pull-Up de $4.7\text{ k}\Omega$.
-4. **Muestreo Analógico Directo (ADC):** Los sensores de **pH, TDS y MQ-2** entregan voltajes continuos que son interpretados por el Convertidor Analógico-Digital interno del ESP32 a una resolución nativa de 12 bits (Valores lógicos digitales entre `0` y `4095`).
-
----
-
-## ⚙️ 3. Operación, Medición e Interpretación de Componentes
+## ⚙️ 1. Operación, Medición e Interpretación de Componentes
 
 ### A. Pantalla Redonda GC9A01A
 * **Operación:** Actúa como dispositivo de salida gráfica y panel informativo principal (Dashboard). Recibe primitivas de diseño mediante SPI y actualiza la interfaz de usuario en intervalos exactos de 1 segundo.
@@ -89,9 +51,20 @@ El sistema utilizaa el ancho de banda y la respuesta síncrona del procesador di
 * **Interpretación:**
   * **NeoPixel:** Cambia cromáticamente replicando la escala universal de reactivos químicos para el pH (Rojo para ácidos críticos, Verde para soluciones neutras óptimas y Púrpura para compuestos fuertemente alcalinos).
   * **Atenuación PWM Eficiente:** En condiciones seguras, todos los LEDs independientes se fijan en `BRILLO_TENUE = 15`. Esto disminuye el consumo eléctrico en un **94%**, manteniendo los reguladores lógicos fríos y extendiendo la vida útil del hardware.
+---
+
+
+## 📡 2. Protocolos de Comunicación Implementados
+
+1. **SPI (Serial Peripheral Interface):** Utilizado exclusivamente por la **Pantalla GC9A01A**. Opera en modo maestro-esclavo a alta velocidad para asegurar un refresco de pantalla fluido de 60 FPS en la interfaz circular sin retrasar las tareas de fondo.
+2. **I2C (Inter-Integrated Circuit):** Empleado por el módulo ambiental **BME680**. Requiere solo dos hilos (`SDA` y `SCL`) compartidos, permitiendo direccionamiento por hardware en el bus (Dirección por defecto: `0x76`).
+3. **1-Wire (Bus un solo hilo):** Implementado por el termopar **DS18B20**. Protocolo propietario de Dallas Semiconductor que realiza transmisiones de datos y sincronía de reloj sobre una única línea compartida (`GPIO 4`), requiriendo una resistencia externa de Pull-Up de $4.7\text{ k}\Omega$.
+4. **Muestreo Analógico Directo (ADC):** Los sensores de **pH, TDS y MQ-2** entregan voltajes continuos que son interpretados por el Convertidor Analógico-Digital interno del ESP32 a una resolución nativa de 12 bits (Valores lógicos digitales entre `0` y `4095`).
+
+
 
 ---
-## 💻 4. Requisitos de Software
+## 💻 3. Requisitos de Software
 
 Para compilar este firmware en el entorno Arduino IDE se requieren las siguientes librerías instaladas mediante el gestor oficial:
 * `Adafruit_GC9A01A` y `Adafruit_GFX`
@@ -100,7 +73,43 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 * `Adafruit_BME680` y `Adafruit_Sensor`
 * `Adafruit_MQTT` y `Adafruit_MQTT_Client`
 
-## 5. Diseño de la PCB
+
+## 📌 4. Pinout General
+
+El siguiente cuadro detalla la interconexión física definitiva entre los periféricos y la placa ESP32 de acuerdo con la arquitectura del firmware:
+
+| Componente / Módulo | Pin del Componente | Pin ESP32 | Tipo de Señal / Rol Electrónico |
+| :--- | :--- | :--- | :--- |
+| **Pantalla GC9A01A** | CS (Chip Select) | **GPIO 5** | Salida Digital (Control SPI) |
+| | DC (Data/Command) | **GPIO 2** | Salida Digital (Control SPI) |
+| | RST (Reset) | **GPIO 15** | Salida Digital (Control SPI) |
+| | CLK / SCLK | **GPIO 18** | Reloj SPI Nativo |
+| | DIN / MOSI | **GPIO 23** | Transmisión de Datos SPI Nativa |
+| **Sensor de pH (PH-4502C)** | Po (Señal Analógica) | **GPIO 34** | Entrada Analógica (ADC1_CH6) |
+| **Sensor TDS (Agua)** | T (Señal Analógica) | **GPIO 35** | Entrada Analógica (ADC1_CH7) |
+| | VCC (Alimentación) | **GPIO 25** | Salida Digital (Control de Transistor) |
+| **Sensor MQ-2 (Aire)** | AO (Señal Analógica) | **GPIO 32** | Entrada Analógica (ADC1_CH4) |
+| **Termopar (DS18B20)** | DQ (Datos) | **GPIO 4** | Bus Digital Bidireccional (1-Wire) |
+| **Sensor BME680** | SDA | **GPIO 21** | Línea de Datos I2C Nativa |
+| | SCL | **GPIO 22** | Línea de Reloj I2C Nativa |
+| **NeoPixel RGB** | DI (Data In) | **GPIO 27** | Bus Digital / Control de Tira (Bit-banging) |
+| **Buzzer Activo** | VCC / Positivo | **GPIO 13** | Salida Digital (Alarma Sonora Fija) |
+| **LED Alerta General** | Ánodo (+) | **GPIO 12** | Salida Digital / PWM |
+| **LED Clima** | Ánodo (+) | **GPIO 14** | Salida Digital / PWM (Atenuación Estética) |
+| **LED Aire** | Ánodo (+) | **GPIO 26** | Salida Digital / PWM (Atenuación Estética) |
+| **LED pH** | Ánodo (+) | **GPIO 33** | Salida Digital / PWM (Atenuación Estética) |
+
+---
+
+## 🧪 5. Cómo usar
+Clona el repositorio.
+Carga el firmware en tu ESP32, cambiando las credenciales de la conexión en Wifi y Adafruit
+Conecta los sensores, pantalla y módulos según el diagrama de pines.
+Configura tu broker MQTT y WiFi.
+Visualiza todo desde tu teléfono o una interfaz desde io.Adafruit.
+
+
+## 6. Diseño de la PCB
 
 | Vista Frontal | Vista Posterior |
 | :---: | :---: |
@@ -114,9 +123,9 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 | <img src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" width="400" height="300" alt="Módulo TDS"> | <img src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" width="400" height="300" alt="Módulo pH"> |
 
 
-## 📜 Certificación OSHW
+## 📜 7. Certificación OSHW
 Este proyecto está certificado como hardware libre abierto por la Open Source Hardware Association (OSHWA).
 
-<img width="4000" height="3221" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
+<img width="4000" height="500" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
 
 ID de certificación: GT000025
