@@ -113,6 +113,7 @@ El siguiente cuadro detalla la interconexión física definitiva entre los perif
 </p>
 
 
+---
 ## 6. Diseño de la PCB.
 
 | Vista Frontal | Vista Posterior |
@@ -127,6 +128,7 @@ El siguiente cuadro detalla la interconexión física definitiva entre los perif
 | <img src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" width="400" height="300" alt="Módulo TDS"> | <img src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" width="400" height="300" alt="Módulo pH"> |
 
 
+---
 ## 📜 7. Certificación OSHWA
 Este proyecto está certificado como hardware libre abierto por la Open Source Hardware Association (OSHWA).
 <p align="center">
