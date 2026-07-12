@@ -102,14 +102,14 @@ El siguiente cuadro detalla la interconexión física definitiva entre los perif
 ---
 
 ## 🧪 5. Cómo usar
-Clona el repositorio.
-Carga el firmware en tu ESP32, cambiando las credenciales de la conexión en Wifi y Adafruit
-Conecta los sensores, pantalla y módulos según el diagrama de pines.
-Configura tu broker MQTT y WiFi.
-Visualiza todo desde tu teléfono o una interfaz desde io.Adafruit.
+**Clona el repositorio.**
+**Carga el firmware en tu ESP32, cambiando las credenciales de la conexión en Wifi y Adafruit.**
+**Conecta los sensores, pantalla y módulos según el diagrama de pines.**
+**Configura tu broker MQTT y WiFi.**
+**Visualiza todo desde tu teléfono o una interfaz desde io.Adafruit.**
 
 
-## 6. Diseño de la PCB
+## 6. Diseño de la PCB.
 
 | Vista Frontal | Vista Posterior |
 | :---: | :---: |
@@ -123,9 +123,13 @@ Visualiza todo desde tu teléfono o una interfaz desde io.Adafruit.
 | <img src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" width="400" height="300" alt="Módulo TDS"> | <img src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" width="400" height="300" alt="Módulo pH"> |
 
 
-## 📜 7. Certificación OSHW
+## 📜 7. Certificación OSHWA
 Este proyecto está certificado como hardware libre abierto por la Open Source Hardware Association (OSHWA).
 
-<img width="4000" height="500" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
+<img width="400" height="500" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
 
 ID de certificación: GT000025
+
+<img width="210" height="112" alt="oshw_facts" src="https://github.com/user-attachments/assets/fe0a0190-218c-4bd6-bee8-09740aaa5ac3" />
+
+* Ver en el [Directorio oficial OSHWA](https://certification.oshwa.org/gt000025.html)
