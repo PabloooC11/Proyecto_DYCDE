@@ -104,8 +104,11 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 
 | Vista Frontal | Vista Posterior |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/5789b969-257a-4d6f-8530-94177b0bef66" width="400" alt="Vista Frontal"> | <img src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" width="400" alt="Vista Posterior"> |
+| <img src="https://github.com/user-attachments/assets/5789b969-257a-4d6f-8530-94177b0bef66" width="400" height="300" alt="Vista Frontal"> | <img src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" width="400" height="300" alt="Vista Posterior"> |
 
+
+<img width="385" height="581" alt="image" src="https://github.com/user-attachments/assets/5789b969-257a-4d6f-8530-94177b0bef66" />
+<img width="253" height="427" alt="image" src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" />
 **Módulos utilizados**
 
 **TDS (Solidos disueltos en el agua)**
