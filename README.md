@@ -111,9 +111,12 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 
 | TDS (Solidos disueltos en el agua) | pH (Acidez agua) |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" width="400" height="500" alt="Módulo TDS"> | <img src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a)" width="400" height="500" alt="Módulo pH"> |
+| <img src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" width="400" height="300" alt="Módulo TDS"> | <img src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" width="400" height="300" alt="Módulo pH"> |
 
 
+## 📜 Certificación OSHW
+Este proyecto está certificado como hardware libre abierto por la Open Source Hardware Association (OSHWA).
 
 <img width="4000" height="3221" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
 
+ID de certificación: GT000025
