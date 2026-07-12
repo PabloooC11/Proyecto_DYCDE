@@ -126,9 +126,14 @@ El siguiente cuadro detalla la interconexión física definitiva entre los perif
 ## 📜 7. Certificación OSHWA
 Este proyecto está certificado como hardware libre abierto por la Open Source Hardware Association (OSHWA).
 <p align="center">
-<img width="400" height="400" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
+<img width="450" height="400" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
+ </p>
+ 
 ID de certificación: GT000025
 
+<p align="center">
 <img width="210" height="112" alt="oshw_facts" src="https://github.com/user-attachments/assets/fe0a0190-218c-4bd6-bee8-09740aaa5ac3" />
 </p>
+
+
 * Ver en el [Directorio oficial OSHWA](https://certification.oshwa.org/gt000025.html).
