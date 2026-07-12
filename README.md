@@ -104,23 +104,16 @@ Para compilar este firmware en el entorno Arduino IDE se requieren las siguiente
 
 | Vista Frontal | Vista Posterior |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/5789b969-257a-4d6f-8530-94177b0bef66" width="400" height="450" alt="Vista Frontal"> | <img src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" width="400" height="450" alt="Vista Posterior"> |
+| <img src="https://github.com/user-attachments/assets/5789b969-257a-4d6f-8530-94177b0bef66" width="400" height="500" alt="Vista Frontal"> | <img src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" width="400" height="500" alt="Vista Posterior"> |
 
 
-<img width="385" height="581" alt="image" src="https://github.com/user-attachments/assets/5789b969-257a-4d6f-8530-94177b0bef66" />
-<img width="253" height="427" alt="image" src="https://github.com/user-attachments/assets/0f159de4-c8d5-4006-8357-8bfa8a0212b7" />
 **Módulos utilizados**
 
-**TDS (Solidos disueltos en el agua)**
+| TDS (Solidos disueltos en el agua) | pH (Acidez agua) |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" width="400" height="500" alt="Módulo TDS"> | <img src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a)" width="400" height="500" alt="Módulo pH"> |
 
 
-<img width="360" height="271" alt="image" src="https://github.com/user-attachments/assets/3a34026f-12d7-4d2e-bcd1-f0feb6dcc1d3" />
-
-
-**pH (Acidez agua)**
-
-
-<img width="510" height="382" alt="image" src="https://github.com/user-attachments/assets/92446994-9d35-425f-aab5-e14d9434f34a" />
 
 <img width="4000" height="3221" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
 
