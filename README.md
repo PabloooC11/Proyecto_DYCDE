@@ -132,4 +132,4 @@ ID de certificación: GT000025
 
 <img width="210" height="112" alt="oshw_facts" src="https://github.com/user-attachments/assets/fe0a0190-218c-4bd6-bee8-09740aaa5ac3" />
 
-* Ver en el [Directorio oficial OSHWA](https://certification.oshwa.org/gt000025.html)
+* Ver en el [Directorio oficial OSHWA](https://certification.oshwa.org/gt000025.html).
