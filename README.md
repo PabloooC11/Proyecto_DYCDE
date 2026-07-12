@@ -128,8 +128,10 @@ Este proyecto está certificado como hardware libre abierto por la Open Source H
 <p align="center">
 <img width="450" height="400" alt="certification-mark-GT000025-stacked" src="https://github.com/user-attachments/assets/063ad08b-89b2-4de4-983f-fff0f8836559" />
  </p>
- 
+
+ <p align="center">
 ID de certificación: GT000025
+ </p>
 
 <p align="center">
 <img width="210" height="112" alt="oshw_facts" src="https://github.com/user-attachments/assets/fe0a0190-218c-4bd6-bee8-09740aaa5ac3" />
